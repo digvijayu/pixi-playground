@@ -1,0 +1,30 @@
+{
+  "name": "pixi-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook ./public -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digvijayu/pixi-playground.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/digvijayu/pixi-playground/issues"
+  },
+  "homepage": "https://github.com/digvijayu/pixi-playground#readme",
+  "dependencies": {
+    "pixi.js": "^6.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@storybook/html": "^6.1.21",
+    "babel-loader": "^8.2.2"
+  }
+}
