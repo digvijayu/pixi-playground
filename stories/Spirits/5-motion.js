@@ -2,7 +2,7 @@ import * as PIXI from "pixi.js";
 
 import images from "../../assets/mario.png";
 
-export const blendmode = () => {
+export const motion = () => {
   let app = new PIXI.Application({
     width: 256,
     height: 256,
@@ -22,11 +22,16 @@ export const blendmode = () => {
     sprites.mario.pivot.x = sprites.mario.width / 2;
     sprites.mario.pivot.y = sprites.mario.height / 2;
     app.stage.addChild(sprites.mario);
+  });
 
-    sprites.mario.tint = Math.random() * 0xffffff;
+  app.ticker.add(() => {
+    if (sprites.mario) {
+      if (sprites.mario.x > window.innerWidth) sprites.mario.x = 0;
+      sprites.mario.x += 1;
+    }
   });
 
   return app.view;
 };
 
-blendmode.storyName = "3-blendmode";
+motion.storyName = "5-motion";
